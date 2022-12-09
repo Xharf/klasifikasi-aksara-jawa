@@ -14,6 +14,7 @@ from preprocessing import preprocessing
 from aksara_models import AksaraJawaModels
 
 app = FastAPI()
+# coba
 
 
 class Item2(BaseModel):
