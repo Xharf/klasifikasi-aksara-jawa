@@ -1,6 +1,7 @@
 steps:
   - name: python
     args: ["FROM", "python:3.10"]
+  - name: python
     args: ["ADD", ".", "/app"]
   - name: python
     args: ["WORKDIR", "/app"]
