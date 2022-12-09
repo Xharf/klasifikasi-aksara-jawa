@@ -9,7 +9,6 @@ steps:
     entrypoint: python
     args: ["-m", "pip", "install", "-r", "requirements.txt"]
   - name: python
-    entrypoint: python
     args:
       ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8080"]
   - name: "gcr.io/cloud-builders/gcloud"
