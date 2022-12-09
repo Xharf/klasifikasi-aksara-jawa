@@ -1,20 +1,20 @@
 steps:
   - name: python
-    entrypoint: python
-    args: ["-m", "FROM", "python:3.10"]
+      entrypoint: python
+      args: ["-m", "FROM", "python:3.10"]
   - name: python
-    entrypoint: python
-    args: ["-m", "ADD", ".", "/app"]
+      entrypoint: python
+      args: ["-m", "ADD", ".", "/app"]
   - name: python
-    entrypoint: python
-    args: ["-m", "WORKDIR", "/app"]
+      entrypoint: python
+      args: ["-m", "WORKDIR", "/app"]
   - name: python
-    entrypoint: python
-    args: ["-m", "pip", "install", "-r", "requirements.txt"]
-   - name: python
-    entrypoint: python
-    args: ["-m", "uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8080"]
+      entrypoint: python
+      args: ["-m", "pip", "install", "-r", "requirements.txt"]
+  - name: python
+      entrypoint: python
+      args: ["-m", "uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "8080"]
   - name: "gcr.io/cloud-builders/gcloud"
-    args: ["app", "deploy"]
+      args: ["app", "deploy"]
   # - name: "gcr.io/cloud-builders/gcloud"
   #   args: ["app", "deploy", "dispatch.yaml"]
