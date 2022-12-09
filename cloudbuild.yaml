@@ -1,16 +1,13 @@
 steps:
   - name: python
-    entrypoint: python
     args: ["FROM", "python:3.10"]
-  - name: python
     entrypoint: python
     args: ["ADD", ".", "/app"]
   - name: python
-    entrypoint: python
     args: ["WORKDIR", "/app"]
   - name: python
     entrypoint: python
-    args: ["pip", "install", "-r", "requirements.txt"]
+    args: ["-m", "pip", "install", "-r", "requirements.txt"]
   - name: python
     entrypoint: python
     args:
