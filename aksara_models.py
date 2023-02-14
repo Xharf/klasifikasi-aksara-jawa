@@ -53,7 +53,6 @@ class AksaraJawaModels:
     def aksara_predict(self, images):
         classes = self.aksaraJawaModel.predict(images, batch_size=32)
         predicted_class_indices = np.argmax(classes)
-        print(classes)
         return {
             "code": 200,
             "message": "Berhasil diklasifikasi",
